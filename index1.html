@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Athmakuri | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0f172a; color: #fff; }
+    header { display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(255,255,255,0.05); }
+    header h1 { color: #38bdf8; }
+    nav a { margin: 0 15px; color: #fff; text-decoration: none; }
+    nav a:hover { color: #38bdf8; }
+
+    section { padding: 60px 10%; }
+
+    .hero { text-align: center; padding: 100px 20px; }
+    .hero h2 { font-size: 2.5rem; }
+    .hero span { color: #38bdf8; }
+    .hero p { margin: 20px 0; color: #cbd5f5; }
+    .btn { padding: 10px 20px; background: #38bdf8; color: #000; border-radius: 8px; text-decoration: none; }
+
+    .about, .skills, .projects, .contact { margin-top: 40px; }
+
+    .skills-list, .project-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px; }
+
+    .card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); }
+
+    footer { text-align: center; padding: 20px; background: rgba(255,255,255,0.05); margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abhishek</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hello, I'm <span>Abhishek Athmakuri</span></h2>
+  <p>Software Engineer | AWS Certified | Java & Python Developer</p>
+  <a href="#projects" class="btn">View Projects</a>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>I am a Computer Science student passionate about building scalable applications, cloud computing, and AI-driven solutions. I enjoy solving complex problems and developing innovative projects.</p>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skills-list">
+    <div class="card">Java</div>
+    <div class="card">Python</div>
+    <div class="card">JavaScript</div>
+    <div class="card">AWS (EC2, S3, Lambda)</div>
+    <div class="card">DBMS</div>
+    <div class="card">Data Structures & Algorithms</div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="card">
+      <h3>Email Detective</h3>
+      <p>Detecting spam mails.</p>
+    </div>
+    <div class="card">
+      <h3>Skeptical Password Generator</h3>
+      <p>Skeptical Password Generator appears to be a coding challenge focused on generating cryptographically secure, strong passwords that pass rigorous test cases for length, character diversity, entropy, and randomness validation. No exact problem statement was found, but similar challenges emphasize using secure randomness (secrets module), diverse character sets, and strength checks to avoid predictable outputs like those in past vulnerabilities.</p>
+    </div>
+    <div class="card">
+      <h3>3D Tank Game</h3>
+      <p>Unity-based tank battle game with enemy tankers.</p>
+    </div>
+    <div class="card">
+      <h3>Email Spam Classifier using ML</h3>
+      <p>In this Project, I have learnt:
+1]Text Processing(Cleaning, Tokenization)
+2]Feature Extraction using TF-IDF
+3]how to build Naive Bayes Classifier
+4]Evaluate accuracy using Confusion Matrix
+5]Classify real email text inputs.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: athmakuriabhishek@gmail.com</p>
+  <p>LinkedIn: linkedin.com/in/abhishek-athmakuri-718154295/</p>
+</section>
+
+<footer>
+  <p>© 2026 Abhishek Athmakuri</p>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
